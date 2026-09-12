@@ -1,8 +1,8 @@
-const CACHE_NAME = 'aramesh-v1';
+const CACHE_NAME = 'aramesh-v2';
 const CORE_ASSETS = [
   './',
   './index.html',
-  './manifest.webmanifest',
+  './manifest.json',
   './icons/icon-192.png',
   './icons/icon-512.png',
   './icons/icon-192-maskable.png',

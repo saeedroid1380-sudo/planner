@@ -5,8 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
 <title>آرامش</title>
 <meta name="theme-color" content="#0D0A1A">
+<meta name="color-scheme" content="dark">
 <meta name="description" content="برنامه‌ی روزانه، عادت‌ها، یادداشت‌ها و مناسبت‌ها">
-<link rel="manifest" href="./manifest.webmanifest">
+<link rel="manifest" href="./manifest.json">
 <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32.png">
 <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -18,6 +19,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
+  color-scheme: dark;
   --bg:#0D0A1A; --bg-2:#140F26; --surface:#1C1633; --surface-2:#251C42;
   --border: rgba(255,255,255,.09);
   --violet:#8B5CF6; --pink:#F472B6; --mint:#34D8A6; --amber:#F5B971; --danger:#F1717A;
@@ -192,9 +194,9 @@ svg{display:block; width:20px; height:20px;}
 .morelink{ display:flex; align-items:center; gap:12px; width:100%; background:var(--surface); border:1px solid var(--border); border-radius:16px; padding:15px; margin-bottom:10px; text-align:right; transition:transform .15s ease;}
 .morelink:active{ transform:scale(.98); }
 .morelink .ic{width:38px;height:38px;border-radius:50%;background:var(--surface-2);display:flex;align-items:center;justify-content:center;color:var(--violet);flex-shrink:0;}
-.morelink .ic svg{width:18px;height:18px;}
-.morelink .ic-violet{ background:rgba(139,92,246,.16); color:var(--violet); }
-.morelink .ic-pink{ background:rgba(244,114,182,.16); color:var(--pink); }
+.morelink .ic svg{width:19px;height:19px;}
+.morelink .ic-violet{ background:rgba(139,92,246,.24); color:#B8A2FF; }
+.morelink .ic-pink{ background:rgba(244,114,182,.24); color:#FF9FCC; }
 .morelink .txt{flex:1; min-width:0;}
 .morelink .txt b{display:block;font-size:14.5px; margin-bottom:2px;}
 .morelink .txt span{font-size:11.5px;color:var(--text-dim); line-height:1.5;}
@@ -258,7 +260,7 @@ function ic(name){
     flame:'<path d="M12 2c1 3-3 4-3 8a3 3 0 006 0c1.2 1 2 2.5 2 4.2A5.2 5.2 0 0112 19.4a5.2 5.2 0 01-5-5.2c0-3.4 2-5 3-7 .3 1 1 1.6 1-1z"/>',
     note:'<path d="M4 3h13l3 3v15H4z"/><path d="M17 3v3h3"/><path d="M8 10h8M8 13h8M8 16h5"/>'
   };
-  return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">'+(m[name]||'')+'</svg>';
+  return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">'+(m[name]||'')+'</svg>';
 }
 function esc(s){ return (s||'').replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
 
@@ -784,17 +786,17 @@ function renderSheet(){
         ic('chevL')+
       '</button>'+
       '<button class="morelink morelink-notes" data-action="open-sheet" data-sheet="notes">'+
-        '<div class="ic" style="background:rgba(244,114,182,.16);color:var(--pink);">'+ic('note')+'</div>'+
+        '<div class="ic" style="background:rgba(244,114,182,.24);color:#FF9FCC;">'+ic('note')+'</div>'+
         '<div class="txt"><b>یادداشت‌ها</b><span>'+(state.notes.length? state.notes.length+' یادداشت — مرور بر اساس ماه' : 'دردودل و تخلیه ذهن')+'</span></div>'+
         ic('chevL')+
       '</button>'+
       '<button class="morelink" data-action="open-sheet" data-sheet="habits-manage">'+
-        '<div class="ic" style="background:rgba(245,185,113,.16);color:var(--amber);">'+ic('flame')+'</div>'+
+        '<div class="ic" style="background:rgba(245,185,113,.24);color:#FFCB8E;">'+ic('flame')+'</div>'+
         '<div class="txt"><b>عادت‌ها</b><span>ساخت و مدیریت عادت‌های روزانه</span></div>'+
         ic('chevL')+
       '</button>'+
       '<button class="morelink" data-action="open-sheet" data-sheet="occasions-manage">'+
-        '<div class="ic" style="background:rgba(139,92,246,.16);color:var(--violet);">'+ic('star')+'</div>'+
+        '<div class="ic" style="background:rgba(139,92,246,.24);color:#B8A2FF;">'+ic('star')+'</div>'+
         '<div class="txt"><b>مناسبت‌ها</b><span>تولد و روزهای تکرارشونده</span></div>'+
         ic('chevL')+
       '</button>';

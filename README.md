@@ -2,14 +2,6 @@
 
 برنامه‌ی روزانه، عادت‌ها، یادداشت‌ها و مناسبت‌ها — قابل نصب روی گوشی (PWA) و آفلاین.
 
-## چطور روی GitHub Pages آپلودش کنم؟
-
-۱. یک ریپازیتوری جدید تو GitHub بساز (مثلاً به اسم `aramesh`).
-۲. همه‌ی فایل‌های این پوشه (`index.html`، `manifest.webmanifest`، `sw.js`، پوشه‌ی `icons`) رو داخل ریپازیتوری آپلود کن (از دکمه‌ی «Add file → Upload files» یا با git).
-۳. برو تو تنظیمات ریپازیتوری: **Settings → Pages**.
-۴. زیر «Build and deployment»، گزینه‌ی Source رو بذار روی **Deploy from a branch**، برنچ `main` و پوشه‌ی `/ (root)` رو انتخاب کن، بعد Save بزن.
-۵. بعد از چند دقیقه، آدرسی شبیه این فعال می‌شه:
-   `https://USERNAME.github.io/aramesh/`
 
 ## چطور روی گوشی نصبش کنم؟
 
